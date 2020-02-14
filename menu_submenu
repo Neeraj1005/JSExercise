@@ -1,0 +1,36 @@
+<div class="form-group">
+  <label for="exampleInputEmail1">Menu Display</label>
+  <select name="status" id="status" class="form-control">
+    <option value="1">Top Menu</option>
+    <option data-check="true" value="2">Sub Menu</option>
+    <option value="0">Footer Menu</option>
+
+  </select>
+
+</div>
+                  
+
+<div class="form-group " id="ifYes" style="">
+  <label for="parent_id">Parent Menu</label>
+  <select class="form-control" name="parent_id" id="parent_id">
+    <option value="0">select Menu</option>      
+    <option value="1">one</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+    <option value="4">Four</option>
+    <option value="5">Five</option>
+
+  </select>
+</div>
+
+jquery code
+    $(function() {
+    $('select').change(function(evt) {
+       //console.log($('select option:selected').data('check'));
+       //$('select option:selected').data('check') ? $('#ifYes').show() : $('#ifYes').hide();
+       
+    });
+   $("#status").change(function(){
+   $("#parent_id").val('0');
+   });
+});
